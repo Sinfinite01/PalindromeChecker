@@ -16,13 +16,31 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  //your code here
-  return false;
+  String lNew = new String(); //lNew has all lower case
+    for(int i=0; i<word.length(); i++)
+    {
+      if(Character.isLetter(word.charAt(i)))
+      {
+        lNew=lNew+word.substring(i,i+1);
+      }
+    }
+    lNew = lNew.toLowerCase();
+    //Changes word to lower case and no punctuation
+  if(lNew.equals(reverse(lNew)))
+    {
+      return true;
+    }
+    return false;
 }
 public String reverse(String str)
 {
     String sNew = new String();
+    String lNew = new String(); //lNew has all lower case
     //your code here
+    for(int i=str.length(); i>0; i--)
+    {
+      sNew=sNew+str.substring(i-1,i);
+    }
     return sNew;
 }
 
