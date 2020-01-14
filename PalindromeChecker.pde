@@ -31,17 +31,17 @@ public boolean palindrome(String word)
       return true;
     }
     return false;
+    //this function checks if it is a palindrome
 }
 public String reverse(String str)
 {
     String sNew = new String();
-    String lNew = new String(); //lNew has all lower case
-    //your code here
     for(int i=str.length(); i>0; i--)
     {
       sNew=sNew+str.substring(i-1,i);
     }
     return sNew;
+    //this function reverses str
 }
 
 
